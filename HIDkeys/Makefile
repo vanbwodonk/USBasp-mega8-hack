@@ -7,7 +7,7 @@ DUDE = avrdude
 # update the lines below to match your configuration
 CFLAGS = -Wall -Os -Iusbdrv -mmcu=atmega8 -DF_CPU=12000000
 OBJFLAGS = -j .text -j .data -O ihex
-DUDEFLAGS = -p attiny2313 -c usbtiny -v
+DUDEFLAGS = -c usbasp -p m8 -B 0.5 -v
 
 # Object files for the firmware (usbdrv/oddebug.o not strictly needed I think)
 OBJECTS = usbdrv/usbdrv.o usbdrv/oddebug.o usbdrv/usbdrvasm.o main.o
